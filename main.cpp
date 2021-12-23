@@ -14,8 +14,8 @@ int main() {
 
     int i, j, temp,
     k = 0,
-    minI, minV,
-    maxI, maxV,
+    minI, minV, minK = 0,
+    maxI, maxV, maxK = 0,
     leftBorderIndex,
     rightBorderIndex;
 
@@ -61,16 +61,38 @@ int main() {
     }
 
     minV = maxV = AVec[0]; // инициализация минимума и максимума по первому элменту считанного массива
+    maxK = 1;
+    minK = 1;
 
     for (i = 0; i < N; i++){ // поиск минимума и максимума и их индексов
         if (AVec[i] > maxV){
             maxV = AVec[i];
             maxI = i;
+            maxK++;
         }
         if (AVec[i] < minV){
             minV = AVec[i];
             minI = i;
+            minK++;
         }
+    }
+
+    if (maxK != 1 and minK == 1){
+        cout << endl << "У нас несколько максимумов!" << endl;
+        system("pause");
+        return 4;
+    }
+
+    if (maxK ==1 and minK != 1){
+        cout << endl << "У нас несколько минимумов!" << endl;
+        system("pause");
+        return 4;
+    }
+
+    if (maxK != 1 and minK != 1 ){
+        cout << endl << "У нас несколько максимумов и минимумов!" << endl;
+        system("pause");
+        return 4;
     }
 
     if (minV ==  maxV and N != 2 and N != 1){
@@ -87,6 +109,12 @@ int main() {
 
     if (N == 2 and minV == maxV){
         cout << endl << "Массив состоит из двух одинаковых элементов!";
+        system("pause");
+        return 6;
+    }
+
+    if (N == 2 and minV != maxV){
+        cout << endl << "Массив состоит из двух элементов!";
         system("pause");
         return 6;
     }
@@ -121,7 +149,6 @@ int main() {
             k++;
         }
     }
-
 
     cout << "Измененный массив с переставленными значениями: " << endl;
     for (i = 0; i < N; i++){
