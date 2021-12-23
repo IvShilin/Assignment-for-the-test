@@ -65,14 +65,18 @@ int main() {
     minK = 1;
 
     for (i = 0; i < N; i++){ // поиск минимума и максимума и их индексов
-        if (AVec[i] >= maxV){
+        if (AVec[i] > maxV){
             maxV = AVec[i];
             maxI = i;
+            maxK = 1;
+        } else if (AVec[i] == maxV){
             maxK++;
         }
-        if (AVec[i] <= minV){
+        if (AVec[i] < minV){
             minV = AVec[i];
             minI = i;
+            minK = 1;
+        } else if (AVec[i] == minV){
             minK++;
         }
     }
