@@ -73,6 +73,12 @@ int main() {
         }
     }
 
+    if (minV ==  maxV){
+        cout << "Все числа одинаковы";
+        system("pause");
+        return 4;
+    }
+
     cout << endl << endl;
 
     cout << "Максимум: " << maxV << endl
