@@ -74,9 +74,21 @@ int main() {
     }
 
     if (minV ==  maxV){
-        cout << "Все числа одинаковы";
+        cout << endl << "Все числа одинаковы" << endl;
         system("pause");
         return 4;
+    }
+
+    if (N == 1){
+        cout << endl << "Массив состоит всего из 1 значения!" << endl;
+        system("pause");
+        return 5;
+    }
+
+    if (N == 2 and minV == maxV){
+        cout << endl << "Массив состоит из двух одинаковых элементов!";
+        system("pause");
+        return 6;
     }
 
     cout << endl << endl;
