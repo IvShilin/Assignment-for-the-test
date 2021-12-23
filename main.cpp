@@ -73,7 +73,7 @@ int main() {
         }
     }
 
-    if (minV ==  maxV){
+    if (minV ==  maxV and N != 2 and N != 1){
         cout << endl << "Все числа одинаковы" << endl;
         system("pause");
         return 4;
