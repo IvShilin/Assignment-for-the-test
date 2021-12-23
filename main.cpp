@@ -86,37 +86,37 @@ int main() {
     if (maxK == 1 and minK != 1){
         cout << endl << "У нас несколько минимумов!" << endl;
         system("pause");
-        return 4;
+        return 5;
     }
 
     if (maxK != 1 and minK != 1 ){
         cout << endl << "У нас несколько максимумов и минимумов!" << endl;
         system("pause");
-        return 4;
+        return 6;
     }
 
     if (minV ==  maxV and N != 2 and N != 1){
         cout << endl << "Все числа одинаковы" << endl;
         system("pause");
-        return 4;
+        return 7;
     }
 
     if (N == 1){
         cout << endl << "Массив состоит всего из 1 значения!" << endl;
         system("pause");
-        return 5;
+        return 8;
     }
 
     if (N == 2 and minV == maxV){
         cout << endl << "Массив состоит из двух одинаковых элементов!";
         system("pause");
-        return 6;
+        return 9;
     }
 
     if (N == 2 and minV != maxV){
         cout << endl << "Массив состоит из двух элементов!";
         system("pause");
-        return 6;
+        return 10;
     }
 
     cout << endl << endl;
