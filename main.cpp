@@ -65,12 +65,12 @@ int main() {
     minK = 1;
 
     for (i = 0; i < N; i++){ // поиск минимума и максимума и их индексов
-        if (AVec[i] > maxV){
+        if (AVec[i] >= maxV){
             maxV = AVec[i];
             maxI = i;
             maxK++;
         }
-        if (AVec[i] < minV){
+        if (AVec[i] <= minV){
             minV = AVec[i];
             minI = i;
             minK++;
@@ -83,7 +83,7 @@ int main() {
         return 4;
     }
 
-    if (maxK ==1 and minK != 1){
+    if (maxK == 1 and minK != 1){
         cout << endl << "У нас несколько минимумов!" << endl;
         system("pause");
         return 4;
